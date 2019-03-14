@@ -30,7 +30,7 @@ require 'functions/init.php';
         <h1>Mr Slime - Gerenciamento de Perguntas e Respostas </h1>
  
         <?php if (isLoggedIn()): ?>
-            <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="cadastro/cadastro.php">Painel</a> | <a href="Login/logout.php">Sair</a></p>
+            <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="cadastro/cadastro.php">Painel</a> | <a href="login/logout.php">Sair</a></p>
         <?php else: ?>
             <p>Olá, visitante. <a href="login/form-login.php">Login</a></p>
         <?php endif; ?>
