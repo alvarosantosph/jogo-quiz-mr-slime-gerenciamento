@@ -32,7 +32,7 @@ require 'functions/init.php';
         <?php if (isLoggedIn()): ?>
             <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="cadastro/cadastro.php">Painel</a> | <a href="Login/logout.php">Sair</a></p>
         <?php else: ?>
-            <p>Olá, visitante. <a href="Login/form-login.php">Login</a></p>
+            <p>Olá, visitante. <a href="login/form-login.php">Login</a></p>
         <?php endif; ?>
 		
 		<img src="_imagens/slime.jpg" heignt="100" alt="SLIME" title"SLIME">

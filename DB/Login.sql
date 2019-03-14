@@ -1,6 +1,0 @@
-CREATE TABLE users(
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL,
-    password VARCHAR(40) NOT NULL,
-    PRIMARY KEY(id)
-) COLLATE=utf8_unicode_ci;

@@ -1,6 +1,0 @@
-CREATE TABLE cadastro(
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    name VARCHAR(60) NOT NULL,
-    email VARCHAR(80) NOT NULL,
-    PRIMARY KEY(id)
-) COLLATE=utf8_unicode_ci;
