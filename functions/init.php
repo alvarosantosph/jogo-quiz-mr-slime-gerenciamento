@@ -1,10 +1,10 @@
 <?php
  
 // constantes com as credenciais de acesso ao banco MySQL
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'mrslime');
+define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net');
+define('DB_USER', 'bbb445256f55fb');
+define('DB_PASS', '4738407b');
+define('DB_NAME', 'heroku_d1daacf8ba8fe82');
  
 // habilita todas as exibições de erros
 ini_set('display_errors', true);
