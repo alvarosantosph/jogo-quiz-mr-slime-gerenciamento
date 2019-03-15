@@ -41,7 +41,7 @@ $stmt->execute();
          
         <h1>Sistema de Cadastro - Mr Slime</h1>
          
-        <p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../Login/logout.php">Sair</a></p>
+        <p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../login/logout.php">Sair</a></p>
  
         <h2>Lista de Categorias</h2>
  
