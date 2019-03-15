@@ -26,11 +26,11 @@
 		
     </head>
  
-    <body>
+    <body onLoad="document.form1.name.focus()">
          
         <h1> Login</h1>
  
-        <form action="login.php" method="post">
+        <form id="form1" name="form1" action="login.php" method="post">
             <label for="name">Usuário: </label>
             <br>
             <input type="text" name="name" id="name" placeholder="Usuário">

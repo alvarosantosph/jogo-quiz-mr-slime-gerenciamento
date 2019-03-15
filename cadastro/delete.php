@@ -7,7 +7,7 @@ require_once '../functions/init.php';
 require '../login/check.php';
  
 // pega o ID da URL
-$id = isset($_GET['id']) ? $_GET['id'] : null;
+$id = isset($_GET['id_categoria']) ? $_GET['id_categoria'] : null;
  
 // valida o ID
 if (empty($id))
@@ -18,9 +18,9 @@ if (empty($id))
  
 // remove do banco
 $PDO = db_connect();
-$sql = "DELETE FROM cadastro WHERE id = :id";
+$sql = "DELETE FROM categorias WHERE id_categoria = :id_categoria";
 $stmt = $PDO->prepare($sql);
-$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+$stmt->bindParam(':id_categoria', $id, PDO::PARAM_INT);
  
 if ($stmt->execute())
 {

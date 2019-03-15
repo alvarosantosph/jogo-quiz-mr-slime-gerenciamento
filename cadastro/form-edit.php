@@ -7,7 +7,7 @@ require_once '../functions/init.php';
 require '../login/check.php';
  
 // pega o ID da URL
-$id = isset($_GET['id']) ? (int) $_GET['id'] : null;
+$id = isset($_GET['id_categoria']) ? (int) $_GET['id_categoria'] : null;
  
 // valida o ID
 if (empty($id))
@@ -18,9 +18,9 @@ if (empty($id))
  
 // busca os dados du usuário a ser editado
 $PDO = db_connect();
-$sql = "SELECT name, email FROM cadastro WHERE id = :id";
+$sql = "SELECT categoria FROM categorias WHERE id_categoria = :id_categoria";
 $stmt = $PDO->prepare($sql);
-$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+$stmt->bindParam(':id_categoria', $id, PDO::PARAM_INT);
  
 $stmt->execute();
  
@@ -45,24 +45,18 @@ if (!is_array($user))
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
     </head>
  
-    <body>
+    <body onLoad="document.form1.categoria.focus()">
  
         <h1>Edição de Cadastro - Mr Slime</h1>
          
-        <form action="edit.php" method="post">
-            <label for="name">Nome: </label>
+        <form id="form1" name="form1" action="edit.php" method="post">
+            <label for="name">Categoria: </label>
             <br>
-            <input type="text" name="name" id="name" value="<?php echo $user['name'] ?>">
+            <input type="text" name="categoria" id="categoria" value="<?php echo $user['categoria'] ?>">
  
             <br><br>
  
-            <label for="email">Email: </label>
-            <br>
-            <input type="text" name="email" id="email" value="<?php echo $user['email'] ?>">
- 
-            <br><br>
- 
-            <input type="hidden" name="id" value="<?php echo $id ?>">
+            <input type="hidden" name="id_categoria" value="<?php echo $id ?>">
  
             <input type="submit" value="Alterar">
         </form>

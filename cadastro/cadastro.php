@@ -9,10 +9,10 @@ require '../login/check.php';
 // abre a conexão
 $PDO = db_connect();
  
-$sql_count = "SELECT COUNT(*) AS total FROM cadastro ORDER BY name ASC";
+$sql_count = "SELECT COUNT(*) AS total FROM categorias ORDER BY categoria ASC";
  
 // SQL para selecionar os registros
-$sql = "SELECT id, name, email FROM cadastro ORDER BY name ASC";
+$sql = "SELECT id_categoria, categoria FROM categorias ORDER BY categoria ASC";
  
 // conta o toal de registros
 $stmt_count = $PDO->prepare($sql_count);
@@ -52,18 +52,16 @@ $stmt->execute();
         <table width="50%" border="1">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
+                    <th>Categoria</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                 <tr>
-                    <td><?php echo $user['name'] ?></td>
-                    <td><?php echo $user['email'] ?></td>
+                    <td><?php echo $user['categoria'] ?></td>
                     <td>
-                        <a href="form-edit.php?id=<?php echo $user['id'] ?>" title="Editar">Editar | </a>
-                        <a href="delete.php?id=<?php echo $user['id'] ?>" title="Excluir" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
+                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar | </a>
+                        <a href="delete.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Excluir" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>

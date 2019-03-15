@@ -18,20 +18,14 @@ require '../login/check.php';
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
     </head>
  
-    <body>
+    <body onLoad="document.form1.categoria.focus()">
  
         <h1>Cadastro de Categoria - Mr Slime</h1>
          
-        <form action="add.php" method="post">
-            <label for="name">Nome: </label>
+        <form id="form1" name="form1" action="add.php" method="post">
+            <label for="name">Categoria: </label>
             <br>
-            <input type="text" name="name" id="name">
- 
-            <br><br>
- 
-            <label for="email">Email: </label>
-            <br>
-            <input type="text" name="email" id="email">
+            <input type="text" name="categoria" id="categoria">
  
             <br><br>
  

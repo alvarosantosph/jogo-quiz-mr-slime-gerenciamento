@@ -7,12 +7,11 @@ require_once '../functions/init.php';
 require '../login/check.php';
  
 // resgata os valores do formulário
-$name = isset($_POST['name']) ? $_POST['name'] : null;
-$email = isset($_POST['email']) ? $_POST['email'] : null;
-$id = isset($_POST['id']) ? $_POST['id'] : null;
+$categoria = isset($_POST['categoria']) ? $_POST['categoria'] : null;
+$id = isset($_POST['id_categoria']) ? $_POST['id_categoria'] : null;
  
 // validação (bem simples, mais uma vez)
-if (empty($name) || empty($email))
+if (empty($categoria))
 {
     echo "Volte e preencha todos os campos";
     exit;
@@ -21,11 +20,10 @@ if (empty($name) || empty($email))
  
 // atualiza o banco
 $PDO = db_connect();
-$sql = "UPDATE cadastro SET name = :name, email = :email WHERE id = :id";
+$sql = "UPDATE categorias SET categoria = :categoria WHERE id_categoria = :id_categoria";
 $stmt = $PDO->prepare($sql);
-$stmt->bindParam(':name', $name);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+$stmt->bindParam(':categoria', $categoria);
+$stmt->bindParam(':id_categoria', $id, PDO::PARAM_INT);
  
 if ($stmt->execute())
 {
