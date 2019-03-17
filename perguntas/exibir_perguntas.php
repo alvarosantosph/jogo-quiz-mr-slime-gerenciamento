@@ -10,7 +10,7 @@ require '../login/check.php';
 $PDO = db_connect();
  
 // SQL para selecionar os registros
-$sql = "SELECT * FROM perguntas ORDER BY id_pergunta ASC";
+$sql = "SELECT * FROM selecionar_perguntas ORDER BY id_pergunta ASC";
 
 $sql_count = "SELECT COUNT(*) AS total FROM perguntas ORDER BY id_pergunta ASC";
  
@@ -47,12 +47,14 @@ $total = $stmt_count->fetchColumn();
             <thead>
                 <tr>
                     <th>Pergunta</th>
+					<th>Categoria</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($pergunta = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
                 <tr>
-                    <td><?php echo $pergunta['questao'] ?></td>
+                    <td><?php echo $pergunta['QUESTAO'] ?></td>
+					<td><?php echo $pergunta['CATEGORIA'] ?></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>

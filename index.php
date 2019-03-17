@@ -10,7 +10,7 @@ require 'functions/init.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
-        <title>Autenticação - Mr Slime</title>
+        <title>Login - Mr Slime</title>
 		
 	<!-- Bootstr-ap -->
     <link href="_css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@ require 'functions/init.php';
             <p>Olá, visitante. <a href="login/form-login.php">Login</a></p>
         <?php endif; ?>
 		
-		<img src="_imagens/slime.jpg" heignt="100" alt="SLIME" title"SLIME">
+		<img src="_imagens/slime.jpg" heignt="80" alt="SLIME" title"SLIME">
 		
  
     </body>
