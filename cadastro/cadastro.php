@@ -10,14 +10,20 @@ require '../login/check.php';
 $PDO = db_connect();
  
 $sql_count = "SELECT COUNT(*) AS total FROM categorias ORDER BY categoria ASC";
+
+$sql_count_perguntas = "SELECT COUNT(*) AS total FROM perguntas";
  
 // SQL para selecionar os registros
 $sql = "SELECT id_categoria, categoria FROM categorias ORDER BY categoria ASC";
  
-// conta o toal de registros
+// conta o total de registros
 $stmt_count = $PDO->prepare($sql_count);
 $stmt_count->execute();
 $total = $stmt_count->fetchColumn();
+
+$stmt_count_perguntas = $PDO->prepare($sql_count_perguntas);
+$stmt_count_perguntas->execute();
+$total_perguntas = $stmt_count_perguntas->fetchColumn();
  
 // seleciona os registros
 $stmt = $PDO->prepare($sql);
@@ -41,11 +47,11 @@ $stmt->execute();
          
         <h1>Sistema de Cadastro - Mr Slime</h1>
          
-        <p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../login/logout.php">Sair</a></p>
+        <p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../perguntas/exibir_perguntas.php">Exibir Perguntas</a> | <a href="../login/logout.php">Sair</a></p>
  
         <h2>Lista de Categorias</h2>
  
-        <p>Total de categorias: <?php echo $total ?></p>
+        <p>Total de categorias: <?php echo $total ?> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Total de perguntas: <?php echo $total_perguntas ?></p>
  
         <?php if ($total > 0): ?>
  
@@ -60,8 +66,8 @@ $stmt->execute();
                 <tr>
                     <td><?php echo $user['categoria'] ?></td>
                     <td>
-                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar | </a>
-                        <a href="delete.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Excluir" onclick="return confirm('Tem certeza de que deseja remover?');">Remover</a>
+						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar">Adicionar Pergunta | </a>
+                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>
