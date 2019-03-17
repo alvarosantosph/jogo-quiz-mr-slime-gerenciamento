@@ -43,22 +43,20 @@ $total = $stmt_count->fetchColumn();
          
         <?php if ($total > 0): ?>
  
-        <table width="50%" border="1">
-            <thead>
-                <tr>
-                    <th>Pergunta</th>
-					<th>Categoria</th>
-                </tr>
-            </thead>
-            <tbody>
                 <?php while ($pergunta = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-                <tr>
-                    <td><?php echo $pergunta['QUESTAO'] ?></td>
-					<td><?php echo $pergunta['CATEGORIA'] ?></td>
-                </tr>
+				
+				<?php echo "<hr>"; ?>
+					<?php echo '<b>QUESTAO:</b><br /> ', $pergunta['QUESTAO'] ?><br /><br />
+					<?php echo '<b>OPCAO A:</b><br /> ', $pergunta['LETRA_A'] ?><br /><br />
+					<?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?><br /><br />
+					<?php echo '<b>OPCAO C:</b><br /> ', $pergunta['LETRA_C'] ?><br /><br />
+					<?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_D'] ?><br /><br />
+					<?php echo '<b>RESPOSTA:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?><br /><br />
+					<?php echo '<b>OPCAO CORRETA:</b> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?><br /><br />
+					<?php echo '<b>CATEGORIA:</b> ', $pergunta['CATEGORIA'] ?><br /><br />
+				<?php echo "<hr>"; ?>
+  
                 <?php endwhile; ?>
-            </tbody>
-        </table>
  
         <?php else: ?>
  
