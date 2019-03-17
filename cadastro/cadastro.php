@@ -55,7 +55,7 @@ $stmt->execute();
  
         <?php if ($total > 0): ?>
  
-        <table width="50%" border="1">
+        <table width="100%" border="1">
             <thead>
                 <tr>
                     <th>Categoria</th>
