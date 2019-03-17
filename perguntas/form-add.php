@@ -38,30 +38,30 @@ if (empty($id))
         <form id="form1" name="form1" action="add.php" method="post">
             <label for="name">Pergunta: </label>
 			<br />
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<textarea rows="6" cols="50" name="pergunta" id="pergunta" maxlength="255" placeholder="Digite aqui a pergunta"></textarea>
+			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<textarea rows="6" cols="50" name="pergunta" id="pergunta" placeholder="Digite aqui a pergunta"></textarea>
  
             <br><br>
 			
 			<label for="name">Questão A: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_a" id="letra_a" style="width:800px"; maxlength="255" placeholder="Questão A">
+			&nbsp; &nbsp; <input type="text" name="letra_a" id="letra_a" style="width:800px"; placeholder="Questão A">
  
             <br><br>
 			
 			
 			<label for="name">Questão B: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_b" id="letra_b" style="width:800px"; maxlength="255" placeholder="Questão B">
+			&nbsp; &nbsp; <input type="text" name="letra_b" id="letra_b" style="width:800px"; placeholder="Questão B">
  
             <br><br>
 
 			
 			<label for="name">Questão C: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_c" id="letra_c" style="width:800px"; maxlength="255" placeholder="Questão C">
+			&nbsp; &nbsp; <input type="text" name="letra_c" id="letra_c" style="width:800px"; placeholder="Questão C">
  
             <br><br>
 
 			
 			<label for="name">Questão D: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_d" id="letra_d" style="width:800px"; maxlength="255" placeholder="Questão D">
+			&nbsp; &nbsp; <input type="text" name="letra_d" id="letra_d" style="width:800px"; placeholder="Questão D">
  
             <br><br>
 			
@@ -71,7 +71,7 @@ if (empty($id))
             <br><br>
 			
 						<label for="name">Resposta Correta: </label>
-			&nbsp; &nbsp; <input type="text" name="resposta" id="resposta" style="width:800px"; maxlength="255" placeholder="Resposta Correta">
+			&nbsp; &nbsp; <input type="text" name="resposta" id="resposta" style="width:800px"; placeholder="Resposta Correta">
  
             <br><br>
 			
