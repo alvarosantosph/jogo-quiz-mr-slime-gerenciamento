@@ -8,6 +8,7 @@ require '../login/check.php';
  
 // pega os dados do formuário
 $pergunta = isset($_POST['pergunta']) ? $_POST['pergunta'] : null;
+$dificuldade = isset($_POST['dificuldade']) ? $_POST['dificuldade'] : null;
 $letra_a = isset($_POST['letra_a']) ? $_POST['letra_a'] : null;
 $letra_b = isset($_POST['letra_b']) ? $_POST['letra_b'] : null;
 $letra_c = isset($_POST['letra_c']) ? $_POST['letra_c'] : null;
@@ -18,7 +19,7 @@ $letra = isset($_POST['letra']) ? $_POST['letra'] : null;
 $id = isset($_POST['id_categoria']) ? $_POST['id_categoria'] : null;
  
 // validação (bem simples, só pra evitar dados vazios)
-if (empty($pergunta) || empty($letra_a) || empty($letra_b) || empty($letra_c) || empty($letra_d) || empty($pontuacao) || empty($resposta) || empty($letra))
+if (empty($pergunta) || empty($dificuldade) || empty($letra_a) || empty($letra_b) || empty($letra_c) || empty($letra_d) || empty($pontuacao) || empty($resposta) || empty($letra))
 {
     echo "Volte e preencha todos os campos";
     exit;
@@ -27,7 +28,7 @@ if (empty($pergunta) || empty($letra_a) || empty($letra_b) || empty($letra_c) ||
 $PDO = db_connect();
  
 // insere no banco
-$sql = "INSERT INTO perguntas(letra_a, letra_b, letra_c, letra_d, questao, pontuacao_pergunta) VALUES(:letra_a,:letra_b,:letra_c,:letra_d,:questao,:pontuacao_pergunta)";
+$sql = "INSERT INTO perguntas(letra_a, letra_b, letra_c, letra_d, questao, pontuacao_pergunta, nivel_dificuldade) VALUES(:letra_a,:letra_b,:letra_c,:letra_d,:questao,:pontuacao_pergunta, :dificuldade)";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':letra_a', $letra_a);
 $stmt->bindParam(':letra_b', $letra_b);
@@ -35,6 +36,7 @@ $stmt->bindParam(':letra_c', $letra_c);
 $stmt->bindParam(':letra_d', $letra_d);
 $stmt->bindParam(':questao', $pergunta);
 $stmt->bindParam(':pontuacao_pergunta', $pontuacao);
+$stmt->bindParam(':dificuldade', $dificuldade);
 $stmt->execute();
 
 // insere no banco

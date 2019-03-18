@@ -63,11 +63,27 @@ $stmt->execute();
             </thead>
             <tbody>
                 <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+				
+				
+
+				
+				<?php
+				
+				$contador_categorias = $user['id_categoria'];
+				
+				$sql_count_categorias = "SELECT COUNT(*) FROM selecionar_categorias WHERE identificador = '$contador_categorias'";
+				$stmt_count_categorias = $PDO->prepare($sql_count_categorias);
+				$stmt_count_categorias->execute();
+				$total_categorias = $stmt_count_categorias->fetchColumn();
+
+				?>
+
+				
                 <tr>
                     <td><?php echo $user['categoria'] ?></td>
                     <td>
-						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar">Adicionar Pergunta | </a>
-                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar</a>
+						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar">Adicionar Pergunta</a> |
+                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar</a> | <?php echo "Total: ", $total_categorias ?>
                     </td>
                 </tr>
                 <?php endwhile; ?>

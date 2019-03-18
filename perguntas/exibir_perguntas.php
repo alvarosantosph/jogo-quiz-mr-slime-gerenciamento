@@ -45,8 +45,33 @@ $total = $stmt_count->fetchColumn();
  
                 <?php while ($pergunta = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
 				
+				<?php
+				
+				$nivel_dificuldade = $pergunta['DIFICULDADE'];
+				$dificuldade = null;
+				
+				if ($nivel_dificuldade == 1) {
+					
+					$dificuldade = "Fácil";
+				}
+				
+				if ($nivel_dificuldade == 2) {
+					
+					$dificuldade = "Médio";
+				}
+				
+				if ($nivel_dificuldade == 3) {
+					
+					$dificuldade = "Díficil";
+				}
+					
+					
+				
+				?>
+				
 				<?php echo "<hr>"; ?>
 					<?php echo '<b>QUESTAO:</b><br /> ', $pergunta['QUESTAO'] ?><br /><br />
+					<?php echo '<b>NÍVEL DE DIFICULDADE:</b><br /> ', $dificuldade ?><br /><br />
 					<?php echo '<b>OPCAO A:</b><br /> ', $pergunta['LETRA_A'] ?><br /><br />
 					<?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?><br /><br />
 					<?php echo '<b>OPCAO C:</b><br /> ', $pergunta['LETRA_C'] ?><br /><br />

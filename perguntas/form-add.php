@@ -42,6 +42,17 @@ if (empty($id))
  
             <br><br>
 			
+			<label for="name">Nível de Dificuldade: </label>
+			
+			<select name="dificuldade" id="dificuldade">
+			<option></option>
+			<option value="1">Fácil</option>
+			<option value="2">Médio</option>
+			<option value="3">Difícil</option>
+			</select>
+			
+			<br><br>
+			
 			<label for="name">Questão A: </label>
 			&nbsp; &nbsp; <input type="text" name="letra_a" id="letra_a" style="width:800px"; placeholder="Questão A">
  
