@@ -40,7 +40,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
         
         <form style="margin-right: 30px; padding-left: 30px;" action="edit.php" method="post">
                 <label  style="margin-right: 30px;" for="name">id_pergunta:</label>
-                <input disabled style="width: 100px;" type="text" name="id_pergunta" id="id_pergunta" value="<?php echo $result['id_pergunta']?>"/>
+                <input  style="width: 100px;" type="text" name="id_pergunta" id="id_pergunta" value="<?php echo $result['id_pergunta']?>"/>
                 <br/>
                 <br/>
                 <label  style="margin-right: 50px;" for="name">Questao:</label>
