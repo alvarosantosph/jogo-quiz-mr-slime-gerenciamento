@@ -33,9 +33,16 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
  
     <body>
          
-        <h1>Perguntas Cadastradas - Mr Slime</h1>
+        <h1>Alterar Perguntas - Mr Slime</h1>
 
-        <form id="formatt" name="formatt" action="add.php" method="post">
+        <br/>
+        <br/>  
+        
+        <form style="margin-right: 30px; padding-left: 30px;" action="edit.php" method="post">
+                <label  style="margin-right: 30px;" for="name">id_pergunta:</label>
+                <input disabled style="width: 100px;" type="text" name="id_pergunta" id="id_pergunta" value="<?php echo $result['id_pergunta']?>"/>
+                <br/>
+                <br/>
                 <label  style="margin-right: 50px;" for="name">Questao:</label>
                 <input  style="width: 500px;" type="text" name="questao" id="questao" value="<?php echo $result['questao']?>"/>
                 <br/>
@@ -56,7 +63,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 <br/>
                 <br/>                
-                <input type="submit" value="Alterar">
+                <input type="submit">
                 <button><a href="exibir_perguntas.php">Voltar</a></button>
         </form>
     </body>
