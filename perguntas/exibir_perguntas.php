@@ -66,7 +66,7 @@ $total = $stmt_count->fetchColumn();
 				}
 					
 					
-				
+		
 				?>
 				
 				<?php echo "<hr>"; ?>

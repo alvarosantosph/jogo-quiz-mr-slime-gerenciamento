@@ -8,7 +8,21 @@ require '../login/check.php';
 $PDO = db_connect();
 
 $id = $_GET['id_pergunta'];
-$sql = "SELECT *FROM PERGUNTAS WHERE id_pergunta = {$id}";
+$sql = "SELECT  pe.id_pergunta, 
+pe.questao,
+pe.letra_a ,
+pe.letra_b,
+pe.letra_c,
+pe.letra_d,
+pe.nivel_dificuldade,
+re.resposta_correta ,
+re.letra_resposta_correta ,
+ct.categoria 
+FROM respostas_correta RE  
+JOIN perguntas pe ON re.id_resposta = pe.id_resposta AND PE.ID_PERGUNTA = {$id}
+JOIN pergunta_categoria pc ON pe.id_pergunta = pc.id_pergunta
+JOIN categorias ct ON pc.id_categoria = ct.id_categoria;";
+
 $stmt = $PDO->prepare($sql);
 
 $stmt->execute();
@@ -60,6 +74,17 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 <br/>
                 <label style="margin-right: 50px;"  for="name"><br/>Letra d<br/> </label>
                 <input style="width: 500px;" type="text" name="letra_d" id="letra_d" value="<?php echo $result['letra_d']?>"/>
+
+                <br/>
+                <label style="margin-right: 50px;"  for="name"><br/>correta: <br/> </label>
+                <input disabled style="width: 500px;" type="text" name="resposta_correta" id="resposta_correta" value="<?php echo $result['resposta_correta']?>"/>
+                <br/>
+                <label style="margin-right: 50px;"  for="name"><br/>resposta: <br/> </label>
+                <input disabled   style="width: 500px;" type="text" name="letra_resposta_correta" id="letra_resposta_correta" value="<?php echo $result['letra_resposta_correta']?>"/>
+                <br/>
+                <label style="margin-right: 50px;"  for="name"><br/>categoria: <br/> </label>
+                <input disabled  style="width: 500px;" type="text" name="categoria" id="categoria" value="<?php echo $result['categoria']?>"/>
+
 
                 <br/>
                 <br/>                

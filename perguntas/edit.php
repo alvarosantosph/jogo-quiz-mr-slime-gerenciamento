@@ -15,7 +15,11 @@ $letra_c = $_POST ['letra_c'];
 $letra_d = $_POST ['letra_d'];
 
 echo $id;
-$SQL = "UPDATE perguntas SET questao = ?, letra_a = ?, letra_b= ?, letra_c = ?, letra_d = ?, nivel_dificuldade = ? where id_pergunta  = ?";
+$SQL = "UPDATE perguntas SET 
+questao = ?, letra_a = ?, 
+letra_b= ?, letra_c = ?, 
+letra_d = ?, nivel_dificuldade = ? 
+where id_pergunta  = ?";
 
 
 $PDO = db_connect();
