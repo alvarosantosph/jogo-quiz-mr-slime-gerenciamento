@@ -41,7 +41,7 @@ $stmt->execute();
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
 	
-	<script language="JavaScript">function move_i(what) { what.style.background='#ffffff'; }function move_o(what) { what.style.background='#999999'; }</script>
+	<script language="JavaScript">function move_i(what) { what.style.background='#d3d3d3'; }function move_o(what) { what.style.background='#ffffff'; }</script>
 	
 	</head>
  
