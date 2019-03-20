@@ -35,7 +35,7 @@ require 'functions/init.php';
             <p>Olá, visitante. <a href="login/form-login.php">Login</a></p>
         <?php endif; ?>
 		
-		<img src="_imagens/mr-slime-logo.png" heignt="80" alt="SLIME" title"SLIME">
+		<img src="_imagens/mr-slime-logo.png" heignt="80" width="80" alt="SLIME" title"SLIME">
 		
  
     </body>
