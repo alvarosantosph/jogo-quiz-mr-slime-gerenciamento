@@ -16,6 +16,45 @@ require '../login/check.php';
 		
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
+	
+	<style>
+	
+	input[type=text]{   
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #cccccc; 
+    border:1px solid #000000;
+    width:150px
+	}
+ 
+	textarea{
+    border: 1px solid #000000;
+    background:#cccccc;
+    width:150px;
+    height:100px;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+	
+ 
+	input[type=text]:hover, textarea:hover{ 
+         background: #ffffff; border:1px solid #990000;
+	}
+ 
+	input[type=submit]{
+        background:#006699;
+        color:#ffffff;
+	}
+	
+	</style>
+	
     </head>
  
     <body onLoad="document.form1.categoria.focus()">
