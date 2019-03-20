@@ -33,6 +33,18 @@
     border:1px solid #000000;
     width:150px
 	}
+	
+	input[type=password]{   
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #cccccc; 
+    border:1px solid #000000;
+    width:150px
+	}
  
 	textarea{
     border: 1px solid #000000;

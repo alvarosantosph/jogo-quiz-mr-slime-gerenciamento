@@ -1,15 +1,1 @@
-<?php
- 
-// constantes com as credenciais de acesso ao banco MySQL
-define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net');
-define('DB_USER', 'bbb445256f55fb');
-define('DB_PASS', '4738407b');
-define('DB_NAME', 'heroku_d1daacf8ba8fe82');
- 
-// habilita todas as exibições de erros
-ini_set('display_errors', true);
-error_reporting(E_ALL);
- 
-// inclui o arquivo de funçõees
-require_once 'functions.php';
-?>
+<?php $_F=__FILE__;$_X='Pz48P3BocA0KIA0KLy8gYzJuc3QxbnQ1cyBjMm0gMXMgY3I1ZDVuYzQxNHMgZDUgMWM1c3MyIDEyIGIxbmMyIE15U1FMDQpkNWY0bjUoJ0RCX0hPU1QnLCAnM3MtY2Rici00cjJuLTUxc3QtMG8uY2w1MXJkYi5uNXQnKTsNCmQ1ZjRuNSgnREJfVVNFUicsICdiYmJ1dWlhaWVmaWlmYicpOw0KZDVmNG41KCdEQl9QQVNTJywgJ3U3bzh1MDdiJyk7DQpkNWY0bjUoJ0RCX05BTUUnLCAnaDVyMmszX2Q2ZDExY2Y4YjE4ZjU4YScpOw0KIA0KLy8gaDFiNGw0dDEgdDJkMXMgMXMgNXg0YjQmI2FvNjsmI2F1aTs1cyBkNSA1cnIycw0KNG40X3M1dCgnZDRzcGwxeV81cnIycnMnLCB0cjM1KTsNCjVycjJyX3I1cDJydDRuZyhFX0FMTCk7DQogDQovLyA0bmNsMzQgMiAxcnEzNHYyIGQ1IGYzbiYjYW82OyYjYXVpOzU1cw0KcjVxMzRyNV8ybmM1ICdmM25jdDQybnMucGhwJzsNCj8+';eval(base64_decode('JF9YPWJhc2U2NF9kZWNvZGUoJF9YKTskX1g9c3RydHIoJF9YLCcxMjM0NTZhb3VpZScsJ2FvdWllMTIzNDU2Jyk7JF9SPWVyZWdfcmVwbGFjZSgnX19GSUxFX18nLCInIi4kX0YuIiciLCRfWCk7ZXZhbCgkX1IpOyRfUj0wOyRfWD0wOw=='));?>
