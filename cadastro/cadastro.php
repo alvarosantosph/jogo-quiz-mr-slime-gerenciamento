@@ -41,17 +41,7 @@ $stmt->execute();
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
 	
-	<style>
-	
-	.trOver
-
-	{background-color: #00CC66}
-
-	.trOut
-
-	{background-color: #FFFFFF}
-	
-	</style>
+	<script language="JavaScript">function move_i(what) { what.style.background='#C0C0C0'; }function move_o(what) { what.style.background='#999999'; }</script>
 	
 	</head>
  
@@ -91,7 +81,7 @@ $stmt->execute();
 				?>
 
 				
-                <tr  onMouseOver="java script: this.className='trOver'" onMouseOut="java script: this.className='trOut'">
+                <tr onmouseover="move_i(this)" onmouseout="move_o(this)">
                     <td><?php echo $user['categoria'] ?></td>
                     <td>
 						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar">Adicionar Pergunta</a> |
