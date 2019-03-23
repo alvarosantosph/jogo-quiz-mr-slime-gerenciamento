@@ -9,6 +9,7 @@
 		
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
+	<link href="../_css/estilo-formulario.css" rel="stylesheet">
 	
 	<style>
 	
@@ -20,52 +21,6 @@
 		margin-left:-110px;
 		margin-top:-40px;
 	
-	}
-	
-	input[type=text]{   
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;    
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
-    background: #cccccc; 
-    border:1px solid #000000;
-    width:150px
-	}
-	
-	input[type=password]{   
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;    
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
-    background: #cccccc; 
-    border:1px solid #000000;
-    width:150px
-	}
- 
-	textarea{
-    border: 1px solid #000000;
-    background:#cccccc;
-    width:150px;
-    height:100px;
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;    
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
-	
- 
-	input[type=text]:hover, textarea:hover{ 
-         background: #ffffff; border:1px solid #990000;
-	}
- 
-	input[type=submit]{
-        background:#006699;
-        color:#ffffff;
 	}
 	
 	</style>
