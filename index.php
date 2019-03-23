@@ -34,8 +34,6 @@ require 'functions/init.php';
         <?php endif; ?>
          
 		<center><img src="_imagens/mr-slime-logo-alterado.png" heignt="600" width="600" alt="SLIME" title"SLIME"></center>
-		
-	    <h1>Mr Slime - Gerenciamento de Perguntas e Respostas </h1>
  
     </body>
 </html>
