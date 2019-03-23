@@ -85,7 +85,7 @@ $stmt->execute();
                     <td><?php echo $user['categoria'] ?></td>
                     <td>
 						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar">Adicionar Pergunta</a> |
-                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar</a> | <?php echo "Total: ", $total_categorias ?>
+                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar</a> | <?php echo $total_categorias ?>
                     </td>
                 </tr>
                 <?php endwhile; ?>
