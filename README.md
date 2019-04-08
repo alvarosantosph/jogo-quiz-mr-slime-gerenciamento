@@ -1,5 +1,5 @@
-# mr-slime-perguntas
+# Mr-Slime-Gerenciamento
 
 ```sh
-Sistema de Gerenciamento de Perguntas e Respostas do Jogo Mr Slime
+Sistema de Gerenciamento de Perguntas e Respostas: Jogo Mr Slime
 ```
