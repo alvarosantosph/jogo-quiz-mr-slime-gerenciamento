@@ -40,6 +40,7 @@ $stmt->execute();
 		
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	
 	<script language="JavaScript">function move_i(what) { what.style.background='#d3d3d3'; }function move_o(what) { what.style.background='#ffffff'; }</script>
 	
@@ -57,10 +58,12 @@ $stmt->execute();
  
         <?php if ($total > 0): ?>
  
-        <table width="100%" border="1">
-            <thead>
+        <table width="100%" border="1" class="table">
+            <thead >
                 <tr>
                     <th>Categoria</th>
+					<th>Funcionalidades</th>
+					<th>Total</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,9 +87,16 @@ $stmt->execute();
                 <tr onmouseover="move_i(this)" onmouseout="move_o(this)">
                     <td><?php echo $user['categoria'] ?></td>
                     <td>
-						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar">Adicionar Pergunta</a> |
-                        <a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar">Editar</a> | <?php echo $total_categorias ?>
+						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar" type="button" class="btn btn btn-danger btn-sm">
+                           <i class="fas fa-save"></i>
+                        </a>
                     </td>
+					<td>
+						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-danger btn-sm">
+                           <i class="fas fa-edit"></i>
+                        </a>
+					</td>
+					<td><?php echo $total_categorias ?></td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
