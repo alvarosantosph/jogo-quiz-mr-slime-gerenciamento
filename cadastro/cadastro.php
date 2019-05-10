@@ -88,7 +88,7 @@ $stmt->execute();
 						
 						<tr onmouseover="move_i(this)" onmouseout="move_o(this)">
 							<td><?php echo $user['categoria'] ?></td>
-							<td align="center">
+							<td>
 								<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar" type="button" class="btn btn btn-success btn-sm justify-content-center">
 								   <i class="fas fa-save"></i>
 								</a>
@@ -97,7 +97,7 @@ $stmt->execute();
 								   <i class="fas fa-edit"></i>
 								</a>
 							</td>
-							<td align="center"> <span class="justify-content-center"><?php echo $total_categorias ?> </span></td>
+							<td> <span class="justify-content-center"><?php echo $total_categorias ?> </span></td>
 						</tr>
 						<?php endwhile; ?>
 					</tbody>
