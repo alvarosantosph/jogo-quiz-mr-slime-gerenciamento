@@ -30,7 +30,7 @@ require 'functions/init.php';
 	            <?php if (isLoggedIn()): ?>
             <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="cadastro/cadastro.php">Painel</a> | <a href="login/logout.php">Sair</a></p>
         <?php else: ?>
-            <span style="color: blue;">SISTEMA DE GERENCIAMENTO DE PERGUNTAS</span><br /><a href="login/form-login.php">Login</a>
+            <span style="color: blue; text-heignt: bold; font font-size: 18px;">SISTEMA DE GERENCIAMENTO DE PERGUNTAS</span><br /><a href="login/form-login.php">Login</a>
         <?php endif; ?>
          
 		<center><img src="_imagens/mr-slime-logo-alterado.png" heignt="600" width="600" alt="SLIME" title"SLIME"></center>
