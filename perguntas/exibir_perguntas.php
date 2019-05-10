@@ -30,64 +30,74 @@ $total = $stmt_count->fetchColumn();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
-        <title>Exibição de Perguntas - Mr Slime</title>
-		
+    <title>Exibição de Perguntas - Mr Slime</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
 	
 	</head>
  
     <body>
-         
-        <h1>Perguntas Cadastradas - Mr Slime</h1>
-         
-        <?php if ($total > 0): ?>
- 
-                <?php while ($pergunta = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-				
-				<?php
-				
-				$nivel_dificuldade = $pergunta['DIFICULDADE'];
-				$dificuldade = null;
-				
-				if ($nivel_dificuldade == 1) {
-					
-					$dificuldade = "Fácil";
-				}
-				
-				if ($nivel_dificuldade == 2) {
-					
-					$dificuldade = "Médio";
-				}
-				
-				if ($nivel_dificuldade == 3) {
-					
-					$dificuldade = "Díficil";
-				}
-					
-					
+		<div class="container">
+			<div class="row">
+				<h1>Perguntas Cadastradas - Mr Slime</h1>
+			
+			</div>
 		
-				?>
+			<div class="row">
+			  
+				<?php if ($total > 0): ?>
+		 
+						<?php while ($pergunta = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+						
+						<?php
+						
+						$nivel_dificuldade = $pergunta['DIFICULDADE'];
+						$dificuldade = null;
+						
+						if ($nivel_dificuldade == 1) {
+							
+							$dificuldade = "Fácil";
+						}
+						
+						if ($nivel_dificuldade == 2) {
+							
+							$dificuldade = "Médio";
+						}
+						
+						if ($nivel_dificuldade == 3) {
+							
+							$dificuldade = "Díficil";
+						}
+							
+							
 				
-				<?php echo "<hr>"; ?>
-					<?php echo '<b>QUESTAO:</b><br /> ', $pergunta['QUESTAO'] ?><br /><br />
-					<?php echo '<b>NÍVEL DE DIFICULDADE:</b><br /> ', $dificuldade ?><br /><br/>
-					<?php echo '<b>OPCAO A:</b><br /> ', $pergunta['LETRA_A'] ?><br /><br />
-					<?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?><br /><br />
-					<?php echo '<b>OPCAO C:</b><br /> ', $pergunta['LETRA_C'] ?><br /><br />
-					<?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_D'] ?><br /><br />
-					<?php echo '<b>RESPOSTA:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?><br /><br />
-					<?php echo '<b>OPCAO CORRETA:</b> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?><br /><br />
-					<?php echo '<b>CATEGORIA:</b> ', $pergunta['CATEGORIA'] ?><br /><br />
-					<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar">Editar</a>
-				<?php echo "<hr>"; ?>
-				
-                <?php endwhile; ?>
- 
-        <?php else: ?>
- 
-        <p>Nenhuma pergunta registrada.</p>
- 
-        <?php endif; ?>
+						?>
+						
+						<?php echo "<hr>"; ?>
+							<?php echo '<b>QUESTAO:</b><br /> ', $pergunta['QUESTAO'] ?><br /><br />
+							<?php echo '<b>NÍVEL DE DIFICULDADE:</b><br /> ', $dificuldade ?><br /><br/>
+							<?php echo '<b>OPCAO A:</b><br /> ', $pergunta['LETRA_A'] ?><br /><br />
+							<?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?><br /><br />
+							<?php echo '<b>OPCAO C:</b><br /> ', $pergunta['LETRA_C'] ?><br /><br />
+							<?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_D'] ?><br /><br />
+							<?php echo '<b>RESPOSTA:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?><br /><br />
+							<?php echo '<b>OPCAO CORRETA:</b> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?><br /><br />
+							<?php echo '<b>CATEGORIA:</b> ', $pergunta['CATEGORIA'] ?><br /><br />
+							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar">Editar</a>
+						<?php echo "<hr>"; ?>
+						
+						<?php endwhile; ?>
+		 
+				<?php else: ?>
+		 
+				<p>Nenhuma pergunta registrada.</p>
+		 
+				<?php endif; ?>
+			
+			</div>
+		</div>
+        
     </body>
 </html>
