@@ -47,24 +47,25 @@ $stmt->execute();
 	</head>
  
     <body>
-         
-        <h1>Sistema de Cadastro - Mr Slime</h1>
-         
-        <p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../perguntas/exibir_perguntas.php">Exibir Perguntas</a> | <a href="../login/logout.php">Sair</a></p>
- 
-        <h2>Lista de Categorias</h2>
- 
-        <p>Total de categorias: <?php echo $total ?> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Total de perguntas: <?php echo $total_perguntas ?></p>
- 
-        <?php if ($total > 0): ?>
 		<div class="container">
 			<div class="row">
-				<table width="100%" border="1" class="table">
+				<h1>Sistema de Cadastro - Mr Slime</h1>
+         
+				<p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../perguntas/exibir_perguntas.php">Exibir Perguntas</a> | <a href="../login/logout.php">Sair</a></p>
+ 
+				<h2>Lista de Categorias</h2>
+ 
+				<p>Total de categorias: <?php echo $total ?> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Total de perguntas: <?php echo $total_perguntas ?></p>
+ 
+        <?php if ($total > 0): ?>
+			</div>
+			<div class="row">
+				<table class="table">
 					<thead>
 						<tr>
 							<th class="col-md-8">Categoria</th>
-							<th class="col-md-2">Funcionalidades</th>
-							<th class="col-md-2">Total</th>
+							<th class="col-md-2 justify-content-center">Funcionalidades</th>
+							<th class="col-md-2 justify-content-center">Total por categoria</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -92,7 +93,7 @@ $stmt->execute();
 								   <i class="fas fa-save"></i>
 								</a>
 								
-								<a href="../perguntas/edit-pergunta.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-primary btn-sm">
+								<a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-primary btn-sm">
 								   <i class="fas fa-edit"></i>
 								</a>
 							</td>
