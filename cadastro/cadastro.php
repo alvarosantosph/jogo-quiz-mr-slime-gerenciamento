@@ -57,50 +57,52 @@ $stmt->execute();
         <p>Total de categorias: <?php echo $total ?> &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; Total de perguntas: <?php echo $total_perguntas ?></p>
  
         <?php if ($total > 0): ?>
- 
-        <table width="100%" border="1" class="table">
-            <thead >
-                <tr>
-                    <th>Categoria</th>
-					<th>Funcionalidades</th>
-					<th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
-				
-				
+		<div class="container">
+			<div class="row">
+				<table width="100%" border="1" class="table">
+					<thead>
+						<tr>
+							<th class="col-md-8">Categoria</th>
+							<th class="col-md-2">Funcionalidades</th>
+							<th class="col-md-2">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php while ($user = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+						
+						
 
-				
-				<?php
-				
-				$contador_categorias = $user['id_categoria'];
-				
-				$sql_count_categorias = "SELECT COUNT(*) FROM selecionar_categorias WHERE identificador = '$contador_categorias'";
-				$stmt_count_categorias = $PDO->prepare($sql_count_categorias);
-				$stmt_count_categorias->execute();
-				$total_categorias = $stmt_count_categorias->fetchColumn();
+						
+						<?php
+						
+						$contador_categorias = $user['id_categoria'];
+						
+						$sql_count_categorias = "SELECT COUNT(*) FROM selecionar_categorias WHERE identificador = '$contador_categorias'";
+						$stmt_count_categorias = $PDO->prepare($sql_count_categorias);
+						$stmt_count_categorias->execute();
+						$total_categorias = $stmt_count_categorias->fetchColumn();
 
-				?>
+						?>
 
-				
-                <tr onmouseover="move_i(this)" onmouseout="move_o(this)">
-                    <td><?php echo $user['categoria'] ?></td>
-                    <td>
-						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar" type="button" class="btn btn btn-danger btn-sm">
-                           <i class="fas fa-save"></i>
-                        </a>
-                    </td>
-					<td>
-						<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-danger btn-sm">
-                           <i class="fas fa-edit"></i>
-                        </a>
-					</td>
-					<td><?php echo $total_categorias ?></td>
-                </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
+						
+						<tr onmouseover="move_i(this)" onmouseout="move_o(this)">
+							<td><?php echo $user['categoria'] ?></td>
+							<td>
+								<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar" type="button" class="btn btn btn-success btn-sm">
+								   <i class="fas fa-save"></i>
+								</a>
+								
+								<a href="../perguntas/edit-pergunta.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-primary btn-sm">
+								   <i class="fas fa-edit"></i>
+								</a>
+							</td>
+							<td><?php echo $total_categorias ?></td>
+						</tr>
+						<?php endwhile; ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
  
         <?php else: ?>
  
