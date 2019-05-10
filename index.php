@@ -21,6 +21,10 @@ require 'functions/init.php';
 			text-align: center;
 	}
 	
+	.titulo {
+		text-heignt: 24px;
+	}
+	
 	</style>
 		
     </head>
@@ -30,7 +34,7 @@ require 'functions/init.php';
 	            <?php if (isLoggedIn()): ?>
             <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="cadastro/cadastro.php">Painel</a> | <a href="login/logout.php">Sair</a></p>
         <?php else: ?>
-            <p>SISTEMA DE GERENCIAMENTO DE PERGUNTAS<br /> <a href="login/form-login.php">Login</a></p>
+            <p class="titulo">SISTEMA DE GERENCIAMENTO DE PERGUNTAS<br /> <a href="login/form-login.php">Login</a></p>
         <?php endif; ?>
          
 		<center><img src="_imagens/mr-slime-logo-alterado.png" heignt="600" width="600" alt="SLIME" title"SLIME"></center>
