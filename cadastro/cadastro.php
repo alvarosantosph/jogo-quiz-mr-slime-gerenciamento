@@ -49,7 +49,7 @@ $stmt->execute();
     <body>
 		<div class="container">
 			<div class="row">
-				<h1>Sistema de Cadastro - Mr Slime</h1>
+				<h1 class="justify-content-center">Sistema de Cadastro - Mr Slime</h1>
          
 				<p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../perguntas/exibir_perguntas.php">Exibir Perguntas</a> | <a href="../login/logout.php">Sair</a></p>
  
@@ -89,15 +89,15 @@ $stmt->execute();
 						<tr onmouseover="move_i(this)" onmouseout="move_o(this)">
 							<td><?php echo $user['categoria'] ?></td>
 							<td>
-								<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar" type="button" class="btn btn btn-success btn-sm">
+								<a href="../perguntas/form-add.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Cadastrar" type="button" class="btn btn btn-success btn-sm justify-content-center">
 								   <i class="fas fa-save"></i>
 								</a>
 								
-								<a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-primary btn-sm">
+								<a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar" type="button" class="btn btn btn-primary btn-sm justify-content-center">
 								   <i class="fas fa-edit"></i>
 								</a>
 							</td>
-							<td><?php echo $total_categorias ?></td>
+							<td> <span class="justify-content-center"><?php echo $total_categorias ?> </span></td>
 						</tr>
 						<?php endwhile; ?>
 					</tbody>
