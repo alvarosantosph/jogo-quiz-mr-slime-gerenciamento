@@ -28,7 +28,7 @@ require 'functions/init.php';
     <body>
 	    
 	            <?php if (isLoggedIn()): ?>
-            <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="cadastro/cadastro.php">Painel</a> | <a href="login/logout.php">Sair</a></p>
+            <span style="color: #4682B4; font-weight: bold; font-size: 24px;">Olá, <?php echo $_SESSION['user_name']; ?></span><br /><a href="cadastro/cadastro.php">Painel</a> | <a href="login/logout.php">Sair</a></p>
         <?php else: ?>
             <span style="color: #4682B4; font-weight: bold; font-size: 24px;">SISTEMA DE GERENCIAMENTO DE PERGUNTAS</span><br /><a href="login/form-login.php">Login</a>
         <?php endif; ?>
