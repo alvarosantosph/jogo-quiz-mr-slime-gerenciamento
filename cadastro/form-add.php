@@ -21,19 +21,10 @@ require '../login/check.php';
 	
     </head>
  
-    <body onLoad="document.form1.categoria.focus()">
+    <body >
  
-        <h1>Cadastro de Categoria - Mr Slime</h1>
+    
          
-        <form id="form1" name="form1" action="add.php" method="post">
-            <label for="name">Categoria: </label>
-            <br>
-            <input type="text" name="categoria" id="categoria">
- 
-            <br><br>
- 
-            <input type="submit" value="Cadastrar">
-        </form>
- 
+        
     </body>
 </html>

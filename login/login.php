@@ -9,7 +9,7 @@ $password = isset($_POST['password']) ? $_POST['password'] : '';
  
 if (empty($name) || empty($password))
 {
-    echo "Informe usuario e senha.";
+    echo "Informe usuario e senha.", $name, $password;
     exit;
 }
  
