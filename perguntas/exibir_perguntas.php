@@ -30,7 +30,7 @@ $total = $stmt_count->fetchColumn();
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<title>Exibição de Perguntas - Mr Slime</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
@@ -43,7 +43,10 @@ $total = $stmt_count->fetchColumn();
 	<div class="container">
 		<div class="row">
 			<h1>Perguntas Cadastradas - Mr Slime</h1>
-	<hr>
+			<a href="../cadastro/cadastro.php" class="btn btn-primary" title="Voltar para página principal">
+				<i class="fas fas fa-arrow-left"></i>
+			</a>
+			<hr>
 
 		</div>
 
@@ -76,17 +79,17 @@ $total = $stmt_count->fetchColumn();
 					<ul class="list-group">
 						<li class="list-group-item"><?php echo '<b>QUESTAO:</b><br /> ', $pergunta['QUESTAO'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO A:</b><br /> ', $pergunta['LETRA_A'] ?></li>
-						<li class="list-group-item">	<?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?></li>
+						<li class="list-group-item"> <?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO C:</b><br /> ', $pergunta['LETRA_C'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_D'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['CATEGORIA'] ?></li>
-						<li class="list-group-item"> 
-							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar" class="btn btn-primary">Editar <i class="fas fa-edit"></i></a>
-							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar" class="btn btn-danger">Excluir <i class="fas fa-trash-alt"></i></a>
-					</li>
-						
+						<li class="list-group-item">
+							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar pergunta" class="btn btn-primary">Editar <i class="fas fa-edit"></i></a>
+							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Deletar pergunta" class="btn btn-danger">Excluir <i class="fas fa-trash-alt"></i></a>
+						</li>
+
 					</ul>
 					<hr>
 				<?php endwhile; ?>
