@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Login - MR Slime</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	
 
     <!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +43,7 @@
                         <label for="passoword">Senha</label>
                         <input type="password" name="password" id="password" placeholder="Senha" class="form-control">
                     </div>
-                    <button type="submit" value="Entrar" class="btn btn-primary">Enviar</button>
+                    <button type="submit" value="Entrar" class="btn btn-primary">Enviar </button>
                     <a  value="Entrar" class="btn btn-danger" href="../index.php">Cancelar</a>
                 </form>
             </div>

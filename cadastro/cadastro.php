@@ -79,7 +79,7 @@ $stmt->execute();
 			<div class="col-md-4">
 					<form id="form1" name="form1" action="add.php" method="post" onLoad="document.form1.categoria.focus()" class="form-group">
 						<input type="text" name="categoria" id="categoria" class="form-control" placeholder="Informe a categoria">
-						<button type="submit" class="btn btn-success" style="margin:7px;" title="Cadastrar nova categoria" >Cadastrar</button>
+						<button type="submit" class="btn btn-success" style="margin:7px;" title="Cadastrar nova categoria" >Cadastrar <i class="fas fa-save"></i></button>
 					</form>
 				</div>
 			<?php if ($total > 0) : ?>

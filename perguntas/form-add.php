@@ -27,8 +27,8 @@ if (empty($id))
 		
 	<!-- Bootstrap -->
     <link href="../_css/bootstrap.min.css" rel="stylesheet">
-	
-		<link href="../_css/estilo-formulario.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link href="../_css/estilo-formulario.css" rel="stylesheet">
 		
 	
     </head>
@@ -51,6 +51,7 @@ if (empty($id))
 					<div class="col-md-3">
 						<div class="form-group">
 							<select name="dificuldade" id="dificuldade" class="form-control">
+									<option value="">Dificuldade</option>
 									<option value="1">Fácil</option>
 									<option value="2">Médio</option>
 									<option value="3">Difícil</option>
@@ -84,17 +85,17 @@ if (empty($id))
 						<input type="text" name="letra_b" id="letra_b"  placeholder="Informe a alternativa b" class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="text" name="letra_c" id="letra_c" placeholder="Questão C" class="form-control">
+						<input type="text" name="letra_c" id="letra_c" placeholder="Informe a alternativa c" class="form-control">
 					</div>
 					
 					<div class="form-group">
-						<input type="text" name="letra_d" id="letra_d"  placeholder="Questão D" class="form-control">
+						<input type="text" name="letra_d" id="letra_d"  placeholder="Informe a alternativa d" class="form-control">
 					</div>		
 					
 					<input type="hidden" name="id_categoria" value="<?php echo $id ?>">
 		
-					<input type="submit" value="Cadastrar" class="btn btn-primary">
-					<a class="btn btn-danger" href="../cadastro/cadastro.php">Voltar</a>
+					<button type="submit" class="btn btn-primary">Salvar <i class="fas fa-save"></i></button>
+					<a class="btn btn-danger" href="../cadastro/cadastro.php">Voltar <i class="fas fas fa-arrow-left"></i></a>
 				</form>
 				</div>
 			</div>
