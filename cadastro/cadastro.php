@@ -63,7 +63,7 @@ $stmt->execute();
 		<div class="row">
 			<h1 class="justify-content-center">Sistema de Cadastro - Mr Slime</h1>
 
-			<p><a href="../index.php">Painel</a> | <a href="form-add.php">Adicionar Categoria</a> | <a href="../perguntas/exibir_perguntas.php">Exibir Perguntas</a> | <a href="../login/logout.php">Sair</a></p>
+			<p><a href="../index.php">Painel</a> | <a href="../perguntas/exibir_perguntas.php">Exibir Perguntas</a> | <a href="../login/logout.php">Sair</a></p>
 
 			<h2 class="justify-content-center">Lista de Categorias</h2>
 
@@ -118,7 +118,7 @@ $stmt->execute();
 										<i class="fas fa-save"></i>
 									</a>
 
-									<a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar pergunta" type="button" class="btn btn btn-primary btn-sm justify-content-center">
+									<a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar categoria" type="button" class="btn btn btn-primary btn-sm justify-content-center">
 										<i class="fas fa-edit"></i>
 									</a>
 								</td>

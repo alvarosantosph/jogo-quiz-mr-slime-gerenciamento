@@ -34,71 +34,70 @@ if (empty($id))
     </head>
  
     <body onLoad="document.form1.pergunta.focus()">
- 
-        <h1>Cadastro de Perguntas - Mr Slime</h1>
+		<div class="container">
+			<div class="row">
+				<h1>Cadastro de Perguntas - Mr Slime</h1>
+			</div>
+			<hr>
+			<div class="row">
+				
+				<div class="col-md-12">
+					<form id="form1" name="form1" action="add.php" method="post">	
+
+					<div class="form-group">
+						<input type="text" name="pergunta" id="pergunta" placeholder="Digite aqui a pergunta" class="md-textarea form-control">
+					</div>
+
+					<div class="col-md-3">
+						<div class="form-group">
+							<select name="dificuldade" id="dificuldade" class="form-control">
+									<option value="1">Fácil</option>
+									<option value="2">Médio</option>
+									<option value="3">Difícil</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="form-group">
+							<input type="number" name="pontuacao" id="pontuacao" placeholder="Pontuação" class="form-control">
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="form-group">			
+							<input type="text" name="resposta" id="resposta" placeholder="Resposta Correta" class="form-control">
+						</div>
+					</div>
+			
+					<div class="col-md-3">
+						<div class="form-group">
+				    		<input type="text" name="letra" id="letra"  maxlength="1" placeholder="Letra" class="form-control">
+						</div>
+					</div>
+
+					<div class="form-group">			
+						<input type="text" name="letra_a" id="letra_a" placeholder="Informe a alternativa a" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<input type="text" name="letra_b" id="letra_b"  placeholder="Informe a alternativa b" class="form-control">
+					</div>
+					<div class="form-group">
+						<input type="text" name="letra_c" id="letra_c" placeholder="Questão C" class="form-control">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" name="letra_d" id="letra_d"  placeholder="Questão D" class="form-control">
+					</div>		
+					
+					<input type="hidden" name="id_categoria" value="<?php echo $id ?>">
 		
-		<br />
-         
-        <form id="form1" name="form1" action="add.php" method="post">
-            <label for="name">Pergunta: </label>
-			<br />
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<textarea rows="6" cols="50" name="pergunta" id="pergunta" placeholder="Digite aqui a pergunta"></textarea>
- 
-            <br><br>
-			
-			<label for="name">Nível de Dificuldade: </label>
-			
-			<select name="dificuldade" id="dificuldade">
-			<option></option>
-			<option value="1">Fácil</option>
-			<option value="2">Médio</option>
-			<option value="3">Difícil</option>
-			</select>
-			
-			<br><br>
-			
-			<label for="name">Questão A: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_a" id="letra_a" style="width:800px"; placeholder="Questão A">
- 
-            <br><br>
-			
-			
-			<label for="name">Questão B: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_b" id="letra_b" style="width:800px"; placeholder="Questão B">
- 
-            <br><br>
-
-			
-			<label for="name">Questão C: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_c" id="letra_c" style="width:800px"; placeholder="Questão C">
- 
-            <br><br>
-
-			
-			<label for="name">Questão D: </label>
-			&nbsp; &nbsp; <input type="text" name="letra_d" id="letra_d" style="width:800px"; placeholder="Questão D">
- 
-            <br><br>
-			
-			<label for="name">Pontuação da Pergunta: </label>
-			&nbsp; &nbsp; <input type="number" name="pontuacao" id="pontuacao" style="width:100px"; placeholder="Pontuação">
- 
-            <br><br>
-			
-						<label for="name">Resposta Correta: </label>
-			&nbsp; &nbsp; <input type="text" name="resposta" id="resposta" style="width:800px"; placeholder="Resposta Correta">
- 
-            <br><br>
-			
-						<label for="name">Letra Correta: </label>
-			&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="letra" id="letra" style="width:50px"; maxlength="1" placeholder="Letra">
- 
-            <br><br>
-			
-			<input type="hidden" name="id_categoria" value="<?php echo $id ?>">
- 
-            <input type="submit" value="Cadastrar">
-        </form>
- 
+					<input type="submit" value="Cadastrar" class="btn btn-primary">
+					<a class="btn btn-danger" href="../cadastro/cadastro.php">Voltar</a>
+				</form>
+				</div>
+			</div>
+		</div>
     </body>
 </html>
