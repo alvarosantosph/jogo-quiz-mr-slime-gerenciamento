@@ -82,8 +82,9 @@ $total = $stmt_count->fetchColumn();
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['CATEGORIA'] ?></li>
-						<li class="list-group-item"> <a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar" class="btn btn-primary">Editar <i class="fas fa-edit"></i></a>
-						<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar" class="btn btn-danger">Excluir <i class="fas fa-trash-alt"></i></a>
+						<li class="list-group-item"> 
+							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar" class="btn btn-primary">Editar <i class="fas fa-edit"></i></a>
+							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar" class="btn btn-danger">Excluir <i class="fas fa-trash-alt"></i></a>
 					</li>
 						
 					</ul>
