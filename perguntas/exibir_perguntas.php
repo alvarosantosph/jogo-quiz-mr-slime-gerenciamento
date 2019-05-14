@@ -14,13 +14,28 @@ $sql = "SELECT * FROM selecionar_perguntas ORDER BY id_pergunta ASC";
 
 $sql_count = "SELECT COUNT(*) AS total FROM perguntas ORDER BY id_pergunta ASC";
 
-// seleciona os registros
-$stmt = $PDO->prepare($sql);
-$stmt->execute();
+$id = isset($_GET['id_categoria']) ? (int)$_GET['id_categoria'] : null;
 
-$stmt_count = $PDO->prepare($sql_count);
-$stmt_count->execute();
-$total = $stmt_count->fetchColumn();
+$select_by_cat = "SELECT * FROM selecionar_perguntas where id_categoria =" . $id;
+
+if (!empty($id)) {
+	// seleciona os registros
+	$stmt = $PDO->prepare($select_by_cat);
+	$stmt->execute();
+
+	$stmt_count = $PDO->prepare($sql_count);
+	$stmt_count->execute();
+	$total = $stmt_count->fetchColumn();
+} else {
+	// seleciona os registros
+	$stmt = $PDO->prepare($sql);
+	$stmt->execute();
+
+	$stmt_count = $PDO->prepare($sql_count);
+	$stmt_count->execute();
+	$total = $stmt_count->fetchColumn();
+}
+
 
 ?>
 <!DOCTYPE html>

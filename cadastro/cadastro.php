@@ -42,10 +42,7 @@ $stmt->execute();
 	<!-- Bootstrap -->
 	<link href="../_css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script language="JavaScript">
 		function move_i(what) {
 			what.style.background = '#d3d3d3';
@@ -77,11 +74,11 @@ $stmt->execute();
 				</div>
 			</div>
 			<div class="col-md-4">
-					<form id="form1" name="form1" action="add.php" method="post" onLoad="document.form1.categoria.focus()" class="form-group">
-						<input type="text" name="categoria" id="categoria" class="form-control" placeholder="Informe a categoria">
-						<button type="submit" class="btn btn-success" style="margin:7px;" title="Cadastrar nova categoria" >Cadastrar <i class="fas fa-save"></i></button>
-					</form>
-				</div>
+				<form id="form1" name="form1" action="add.php" method="post" onLoad="document.form1.categoria.focus()" class="form-group">
+					<input type="text" name="categoria" id="categoria" class="form-control" placeholder="Informe a categoria">
+					<button type="submit" class="btn btn-success" style="margin:7px;" title="Cadastrar nova categoria">Cadastrar <i class="fas fa-save"></i></button>
+				</form>
+			</div>
 			<?php if ($total > 0) : ?>
 			</div>
 			<div class="row">
@@ -120,6 +117,10 @@ $stmt->execute();
 
 									<a href="form-edit.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Editar categoria" type="button" class="btn btn btn-primary btn-sm justify-content-center">
 										<i class="fas fa-edit"></i>
+									</a>
+
+									<a href="../perguntas/exibir_perguntas.php?id_categoria=<?php echo $user['id_categoria'] ?>" title="Listar por categoria" type="button" class="btn btn-info btn-sm justify-content-center">
+										<i class="fas fa-search-location"></i>
 									</a>
 								</td>
 								<td> <span class="justify-content-center"><?php echo $total_categorias ?> </span></td>
