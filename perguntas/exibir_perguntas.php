@@ -104,31 +104,32 @@ if (!empty($id)) {
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['CATEGORIA'] ?></li>
 						<li class="list-group-item">
 							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar pergunta" class="btn btn-primary">Editar <i class="fas fa-edit"></i></a>
-							<a title="Deletar pergunta" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Excluir <i class="fas fa-trash-alt"></i></a>
+							<a title="Deletar pergunta" class="btn btn-danger" data-toggle="modal" data-target="#ModalDeletar">Excluir <i class="fas fa-trash-alt"></i></a>
 						</li>
 
 					</ul>
 					<hr>
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<!-- Modal deletar -->
+					<div class="modal fade" id="ModalDeletar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLabel">Deletar pergunta</h5>
+									<h5 class="modal-title" id="exampleModalLabel" >Deletar pergunta</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
-								<div class="modal-body justify-content-center">
+								<div class="modal-body text-center">
 									Tem certeza que deseja excluir a pergunta: <?php echo $pergunta['QUESTAO'] ?>
 								</div>
 								<div class="modal-footer">
-									<a href="delete-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" class="btn btn-danger">Deletar</a>
-									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<a href="delete-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" class="btn btn-danger">Excluir <i class="fas fa-trash-alt"></i></a>
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Voltar <i class="fas fas fa-arrow-left"></i></button>
 								</div>
 							</div>
 						</div>
 					</div>
+
 				<?php endwhile; ?>
 
 			<?php else : ?>
