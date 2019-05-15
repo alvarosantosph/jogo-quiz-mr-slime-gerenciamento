@@ -99,9 +99,9 @@ if (!empty($id)) {
 						<li class="list-group-item"> <?php echo '<b>OPCAO B:</b><br /> ', $pergunta['LETRA_B'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO C:</b><br /> ', $pergunta['LETRA_C'] ?></li>
 						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_D'] ?></li>
-						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?></li>
-						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?></li>
-						<li class="list-group-item"><?php echo '<b>OPCAO D:</b><br /> ', $pergunta['CATEGORIA'] ?></li>
+						<li class="list-group-item"><?php echo '<b>RESPOSTA CORRETA:</b><br /> ', $pergunta['RESPOSTA_CORRETA'] ?></li>
+						<li class="list-group-item"><?php echo '<b>LETRA CORRETA:</b><br /> ', $pergunta['LETRA_RESPOSTA_CORRETA'] ?></li>
+						<li class="list-group-item"><?php echo '<b>CATEGORIA:</b><br /> ', $pergunta['CATEGORIA'] ?></li>
 						<li class="list-group-item">
 							<a href="edit-pergunta.php?id_pergunta=<?php echo $pergunta['id_pergunta'] ?>" title="Editar pergunta" class="btn btn-primary">Editar <i class="fas fa-edit"></i></a>
 							<a title="Deletar pergunta" class="btn btn-danger" data-toggle="modal" data-target="#ModalDeletar">Excluir <i class="fas fa-trash-alt"></i></a>
