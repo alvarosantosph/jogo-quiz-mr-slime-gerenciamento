@@ -35,13 +35,13 @@
                 <form id="form1" name="form1" action="login.php" method="post">
                     <div class="form-group">
                         <label for="name">Endereço de email</label>
-                        <input type="text" name="name" id="name" placeholder="Seu email" class="form-control">
+                        <input type="email" name="name" id="name" placeholder="Seu email" class="form-control">
                         <small id="name" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
                     </div>
 
                     <div class="form-group">
                         <label for="passoword">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="Senha" class="form-control">
+                        <input type="password" name="password" id="password" placeholder="Sua senha" class="form-control">
                     </div>
                     <button type="submit" value="Entrar" class="btn btn-primary">Enviar </button>
                     <a  value="Entrar" class="btn btn-danger" href="../index.php">Cancelar</a>
