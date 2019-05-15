@@ -37,6 +37,8 @@ if (!empty($id)) {
 }
 
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -107,11 +109,14 @@ if (!empty($id)) {
 
 					</ul>
 					<hr>
+
 				<?php endwhile; ?>
 
 			<?php else : ?>
-
+				<div class="alert alert-info" role="alert">
 				<p>Nenhuma pergunta registrada.</p>
+				</div>
+				
 
 			<?php endif; ?>
 
