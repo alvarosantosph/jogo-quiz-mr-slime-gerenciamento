@@ -23,7 +23,7 @@ class Jogadores extends Game {
 	}
 	
 	public function buscaJogadores() {
-		return $this->query("SELECT * FROM player ORDER BY pontuacao DESC LIMIT 10")->FetchAll();
+		return $this->query("SELECT * FROM player ORDER BY pontuacao DESC LIMIT 3")->FetchAll();
 		
 	}
 }
