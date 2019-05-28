@@ -18,7 +18,7 @@ class Jogadores extends Game {
 	}
 	
 	public function verificaEmailAlteracao($email) {
-		return $this->query("SELECT * FROM $this->tabela WHERE email ='$email' NOT IN ($email)")->Fetch();
+		return $this->query("SELECT * FROM $this->tabela WHERE email NOT IN ($email)")->Fetch();
 		
 	}
 	
