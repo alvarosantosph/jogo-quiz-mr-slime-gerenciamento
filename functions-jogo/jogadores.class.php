@@ -19,7 +19,7 @@ class Jogadores extends Game {
 	
 	
 	public function verificaEmailAtualizar($email) {
-		return $this->query("SELECT * FROM $this->tabela WHERE email ='$email' AND id != 1")->Fetch();
+		return $this->query("SELECT * FROM $this->tabela WHERE email ='$email' AND id_player !='$id_player'")->Fetch();
 		
 	}
 	
