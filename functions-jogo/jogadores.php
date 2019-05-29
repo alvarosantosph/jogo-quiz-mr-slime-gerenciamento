@@ -33,6 +33,7 @@ if (empty($_POST["user_name"]) || empty($_POST["email"]) || $_POST["password"] =
 }
 
 if ($_POST['acao'] == "atualiza") {
+	$id_player = $_POST['id_player'];
 	$_POST['id_player'] = $_POST['id_player'];
 	$_POST['user_name'] = $_POST['user_name'];
 	$_POST['email'] = $_POST['email'];
