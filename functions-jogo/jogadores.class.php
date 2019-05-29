@@ -19,7 +19,7 @@ class Jogadores extends Game {
 	
 	
 	public function verificaEmailAtualizar($email) {
-		return $this->query("SELECT * FROM $this->tabela WHERE email ='$email' AND email !='$email'")->Fetch();
+		return $this->query("SELECT DISTINCT * FROM $this->tabela WHERE email ='$email'")->Fetch();
 		
 	}
 	
