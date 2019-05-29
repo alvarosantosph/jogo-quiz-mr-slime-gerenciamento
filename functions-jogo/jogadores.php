@@ -37,7 +37,7 @@ if ($_POST['acao'] == "atualiza") {
 	$_POST['user_name'] = $_POST['user_name'];
 	$_POST['email'] = $_POST['email'];
 	$_POST['password'] = sha1(md5($_POST['password']));
-	$verifica3 = $jogadores->verificaEmailAtualizar($_POST['email'], $_POST['id_player']);
+	$verifica3 = $jogadores->verificaEmail($_POST['email']);
 	if ($verifica3) {
 		die("2");
 	}
