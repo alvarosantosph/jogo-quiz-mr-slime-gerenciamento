@@ -7,10 +7,11 @@ Sistema de Gerenciamento de Perguntas e Respostas: Jogo Mr Slime
 ```sh
 Projeto Final - Disciplina: Desenvolvimento de Projeto de Software - Unipê 2019.1
 ```
-Plataforma de Desenvolvimento: 
-
-* PHP 7 
-* MYSQL 8 
+<div align="left">
+   <img src="https://img.shields.io/badge/-HTML%205-orangered?style=for-the-badge" alt="HTML 5">
+  <img src="https://img.shields.io/badge/-PHP-mediumslateblue?style=for-the-badge" alt="PHP">
+  <img src="https://img.shields.io/badge/-MYSQL-lightsteelblue?style=for-the-badge" alt="MYSQL">
+</div>
 
 http://mr-slime.herokuapp.com/
 
