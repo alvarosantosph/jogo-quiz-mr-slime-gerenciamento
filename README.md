@@ -1,4 +1,4 @@
-# Gerenciamento: Jogo-Mr-Slime
+# Gerenciamento: Quiz-Mr-Slime
 
 ```sh
 Sistema de Gerenciamento de Perguntas e Respostas: Jogo Mr Slime
